@@ -1,15 +1,18 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import PWAInstallPrompt from '@/components/PWAInstallPrompt'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
+export const viewport: Viewport = {
+  themeColor: '#195f52',
+}
+
 export const metadata: Metadata = {
   title: 'Protocolo Chama Verde',
   description: 'Acompanhamento diário de saúde e emagrecimento',
   manifest: '/manifest.json',
-  themeColor: '#195f52',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
